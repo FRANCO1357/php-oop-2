@@ -8,6 +8,7 @@ class Product{
     protected $animal_types;
 
     public function __construct($name, $description, $price, $animal_types){
+        $this->setId();
         $this->setName($name);
         $this->setDescription($description);
         $this->setPrice($price);
@@ -25,7 +26,7 @@ class Product{
     /**
      * Set the value of id
      */
-    public function setId($id): self
+    public function setId(): self
     {
         $this->id = uniqid();
 
